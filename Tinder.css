@@ -1,0 +1,446 @@
+*{
+    margin: 0;
+     font-family: 'Montserrat', sans-serif;
+   box-sizing:border-box;
+}
+body {
+    margin: 0;
+    padding: 0;
+}
+.uppermost{
+    background: 
+    linear-gradient(to bottom, rgba(15, 15, 18, 0.8), rgba(10, 9, 9, 0)), /* Subtle dark purplish at bottom, transparent at top */
+    url('Tinderbackgroundpic.webp') no-repeat center center / cover;
+  color: white;
+  height: 100vh;
+  /* position: fixed; 
+  z-index: -1; Ensures it stays behind other content */
+}
+.main{
+  height: 87.01px;
+  display: flex;
+    justify-content: space-between; /* Pushes children to opposite ends */
+  align-items: center;
+}
+.submain{
+    display: flex;
+}
+.logo{
+    display: flex;
+    align-items: center;
+   font-size: 30px;
+   margin-left: 24px;
+}
+.para{
+    margin-left: 6px;
+    font-weight: 900;
+    font-size: 50px;
+}
+.feature{
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+     position: relative; /* Creates positioning context */
+}
+.list{
+   display: inline-block;
+    margin-left: 3px;
+    font-weight: 800;
+    font-size: 20px;
+}
+.list .nav-link{
+      display: inline-block;
+      width: 100px;         /* initial width */
+      height: 40px;         /* initial height */
+      color: white;
+      text-decoration: underline solid white;
+      text-underline-offset: 6px;
+      text-decoration-thickness: 2px;
+      transition: width 0.3s, height 0.3s, background 0.3s, color 0.3s;
+    }
+.list .nav-link:hover {
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    width: 105px;         /* expanded width */
+    height: 42px;         /* expanded height */
+    text-decoration: none;
+    border: 1px solid white;
+    background-color: white;
+    border-radius: 15px;
+    color: rgba(66, 70, 69, 0.984);
+}
+.feature > li > div:nth-child(2) {
+    display: none;  /* Hidden by default */
+    position: absolute;  /* Takes it out of normal document flow */
+    margin-top: 10px;  /* Space between button and dropdown */
+    z-index: 100;  /* Ensures dropdown appears above other content */
+}
+
+.feature > li:hover > div:nth-child(2) {
+    display: block;  /* Shows dropdown on hover */
+}
+.dropdown {
+    height: 250%;
+    width: 43%;
+    top: 70%;          /* Places dropdown below the button */
+    left: 0;            /* Aligns with left edge of parent */
+    background-color: white;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+.dropdown-menu {
+    display: grid;
+    justify-content:center ;
+    align-items: center;
+}
+.dropdown-menu a {
+    display: block;
+    margin-top: 10px;
+     font-size: 17px;
+    color: black;
+    font-weight: 600;
+     text-underline-offset: 8px;
+     text-decoration-thickness: 0.5px;
+}
+.dropdown-menu a:hover {
+    text-decoration: underline;
+    color: #ff6b81; /* Tinder pink */
+}
+.Subscription {
+    text-decoration: none !important; /* Removes underline */
+}
+.Platinum {
+    text-decoration: none !important;
+}
+.dropdown-third {
+    position: absolute;
+     height: 300%;
+    width: 43%;
+    background-color: white;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+.dropdown-ul{
+    display: flex;
+    flex-direction: column;
+    height: 250%;
+    gap: 8px;
+
+}
+.dropdown-third a{
+      color: black;
+    font-weight: 600;
+     text-decoration-thickness: 0.5px;
+    text-underline-offset: 7px;
+}
+.dropdown-third a:hover {
+    text-decoration: underline;
+    color: #ff6b81; /* Tinder pink */
+}
+.nav-security {
+    text-decoration: none !important;
+}
+.main-secound {
+    display: flex ;
+    height: 100%;
+    width:20%;
+    margin-right: 15px;
+    justify-content: center;
+    align-items: center;
+    gap: 35%;
+}
+.model{
+    display: flex;
+    padding: 3px 3px;
+    border: 1px solid transparent;
+    border: none;
+    gap: 7px;
+    font-size: 20px;
+    font-weight: 600;
+    background-color: transparent;
+    cursor: pointer;
+  transition: all 0.3s ease;
+
+}
+.model:hover{
+    border: 1px solid transparent;
+    background-color: rgba(7, 6, 6, 0.2);
+    border-radius: 10px;
+    z-index: 100%;
+}
+.login {
+    width: 80px;
+     margin-right: 20px;
+     height: 100%;
+}
+.login button {
+    width: 100%;
+    height: 100%;
+    font-size: 20px;
+    font-weight: 600;
+    border-radius: 10px;
+    background: #fff;
+    color: #222;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    cursor: pointer;
+    transition: background 0.3s, box-shadow 0.3s;
+    box-shadow: 0 2px 8px rgba(34, 34, 34, 0.15);
+}
+
+.login button:hover {
+    background: linear-gradient(90deg, #ff9472 0%, #ff6b81 100%);
+    box-shadow: 0 4px 16px rgba(255, 107, 129, 0.25);
+}
+
+.login button i {
+    font-size: 22px;
+}
+.section_firstdiv {
+  display: flex;
+  flex-direction: column;   /* Stack children vertically */
+  width: 100%;
+  height: 70%;              /* Or use 70vh for 70% of viewport height */
+  justify-content: center;
+  align-items: center;
+}
+
+.secund_section {
+    display: flex;
+    width: 100%;
+    height: 168px;
+    justify-content: center;
+    align-items: last baseline;
+    font-size: 5vw;
+    /* margin-top: 10px; */
+    /* padding-top: 10px; */
+}
+
+.third_section {
+    display: flex;
+    width: 100%;            /* Ensure it fills the width */
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    /* padding-bottom: 10px; */
+    /* margin-bottom: 10px; */
+    /* Add height if you want a fixed height, e.g.: */
+    /* height: 100px; */
+}
+.app_store,
+ .google_play{
+    display: flex;
+    padding: 12px 24px;
+    background-color:white;
+    gap: 10px;
+    border-radius: 25px;
+    font-size: 23px;
+    color: #21262E;
+    font-weight: 600;
+}
+.app_store:hover,
+.google_play:hover {
+    color: #434f60;
+}
+.other_section {
+    display: flex;
+    flex-direction: column;
+    background-color: #111418;
+}
+
+.list-ul{
+    display: flex;
+    height: 279px;
+    gap: 20px;
+    list-style: none;
+  color: #B9BFC8;
+  margin: 16px 85px 16px 70px;
+  padding-left: 0; /* Remove default browser padding */
+}
+.upper_list{
+    display: flex;
+    height: 260px;
+    width: 370px;
+    border: 0.675px solid white;
+    border-radius: 15px;
+    padding: 24px 24px 24px 24px;
+}
+.set_icon{
+    display: flex;
+    justify-content: space-between;
+    
+}
+.set_icon h2{
+    font-size: 20px;
+    color: white;
+}
+.quote-icon{
+    /* height: 100px;
+    width: 100px; */
+ font-size: 30px;   
+
+}
+.line {
+    /* display: flex; */
+/* flex-grow: 1;   */
+  height: 1px;
+  background-color: rgb(157, 156, 156); /* or your desired color */
+  opacity: 0.5;
+}
+ .lower_list{
+    display: flex;
+    flex-direction: column;
+}
+ .lower_list p{
+    margin-top: 10px;
+}
+ .footer_section{
+    display: flex;
+   margin-left: 30px;
+   color: #B9BFC8;
+ gap: 20px;
+}
+ .footer_section .social{
+    margin-left: 30px;
+}
+ .footer_section .faq{
+    margin-left: 40px;
+}
+ .social{
+    display: flex;
+    flex-direction: column;
+}
+ .faq{
+    display: flex;
+    flex-direction: column; 
+}
+ .legal{
+    display: flex;
+    flex-direction: column;
+}
+ .careers{
+    display: flex;
+    flex-direction: column;
+}
+ .legal,.careers, .faq, h3{
+    margin-left: 37px;
+    font-size: 20px;
+    font-weight: 600;
+    color:#F0F2F4;
+} 
+.footer_section .legal li,
+.footer_section .careers li,
+.footer_section .faq li,
+.footer_section .social li {
+    list-style: none;
+    padding-top: 6px;
+}
+
+.footer_section .legal a,
+.footer_section .careers a,
+.footer_section .faq a,
+.footer_section .social a {
+    color: #B9BFC8;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 16px;
+}
+.footer_section .legal a:hover,
+.footer_section .careers a:hover,
+.footer_section .faq a:hover,
+.footer_section .social a:hover {
+    color: #d54a4a; /* Tinder pink */
+    /* text-decoration: underline; */
+}
+#social-links {
+    display: flex;
+    gap: 15px;
+}
+
+/* Increase icon size in social links */
+#social-links i {
+    font-size: 32px; /* Change to your desired size */
+}
+.footer-hr {
+    margin-top: 10px;
+    margin-left: 108px;
+    width: 88%;
+   opacity: 0.5;
+}
+.footer_section2{
+    display: flex;
+    height: 80px;
+    width: 88%;
+    margin-left: 108px;
+    margin-top: 16px;
+    gap: 27px;
+}
+.footer-get{
+    display: flex;
+    /* align-items: center; */
+    margin-top: 22px;
+    font-size: 18px;
+    font-weight: 600;
+    color: #F0F2F4;
+}
+.footer-download{
+    display: flex;
+    gap: 35px;
+}
+.footer-download-icon{
+    display: flex;
+    margin-top: 12px;
+}
+.footer-download-icon img{
+    height: 50px;
+    width: 145px;
+}
+.footer-playstore img{
+    height: 77px;
+    width: 175px;
+}
+.footer-paragraph{
+    display: flex;
+    color: #B9BFC8;
+     /* height: 60px; */
+    width: 88%;
+    /* margin-left: 108px; */
+    margin: 20px 0px 0px 108px;
+    font-size: 14px;
+}
+.footer-paragraph2{
+    display: flex;
+    color: #B9BFC8;
+    /* height: 36px; */
+    width: 88%;
+    /* margin-left: 108px; */
+     margin: 20px 0px 0px 108px;
+    font-size: 14px;
+}
+.footer-bottom{
+    display: flex;
+    width: 88%;
+    margin-left: 108px;
+    padding: 16px 0px;
+    height: 66px;
+    justify-content: space-between;
+}
+.footer-bottom-left a{
+    text-decoration: none;
+    color: #B9BFC8;
+    font-size: 14px;
+}
+.footer-bottom-right{
+    display: flex;
+    color: #B9BFC8;
+    font-size: 14px;
+}
+.footer-bottom-left a:hover{
+    color: #d54a4a; /* Tinder pink */
+}
