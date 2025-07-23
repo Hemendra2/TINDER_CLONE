@@ -23,3 +23,4 @@ It's a simple and  non-responsive UI created for learning and practice purposes.
 Tech used
 -HTML5
 -CSS3
+-IN further used java script
