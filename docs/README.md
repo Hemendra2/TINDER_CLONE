@@ -9,7 +9,7 @@ It's a simple and  non-responsive UI created for learning and practice purposes.
 
 ## 🌐 Live Demo
 
-👉 [View Site on GitHub Pages] https://hemendra2.github.io/TINDER_CLONE/
+👉 [View Site on GitHub Pages] (https://hemendra2.github.io/TINDER_CLONE/)
 
 ---
 ## 🚀 Features
